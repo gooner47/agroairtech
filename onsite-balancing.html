@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Balancing and Vibration Testing | At your location</title>
+  <!-- ✅ Custom Tailwind config: Add this BEFORE the Tailwind script -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            agrogreen: '#22a556',
+            navbarbg: '#e4e2db',   // new color for navbar
+          }
+        }
+      }
+    }
+  </script>
+  <!-- ✅ Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Your custom font setup -->
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Libre Baskerville', serif; }
+  </style>
+</head>
+
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-black backdrop-blur-lg p-4 text-green-400 transition-all duration-300 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo cropped.png" alt="Logo" class="h-10 w-auto">
+        <span class="text-xl font-bold">AGRO AIRTECH</span>
+      </div>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:underline font-bold">Home</a>
+        <a href="services.html" class="hover:underline font-bold">Services</a>
+        <a href="about.html" class="hover:underline font-bold">About</a>
+        <a href="contact.html" class="hover:underline font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dynamic Balancing at your Workshop -->
+  <section class="bg-[#e2e0d9] text-black py-16 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      
+      <!-- Left: Section Heading -->
+      <div>
+        <h1 class="text-5xl font-semibold leading-tight font-serif text-black">
+          Site balancing & <br>vibration testing
+        </h1>
+      </div>
+
+      <!-- Right: Paragraphs -->
+      <div>
+        <p class="mb-4">At Agro AirTech, we offer on-site dynamic balancing and vibration testing services tailored for industrial fans, blowers, and rotating equipment.</p>
+        <p class="mb-4">With our portable in-situ dynamic balancer, we help you correct imbalance issues at your location, reducing downtime and eliminating the need for disassembly or transport.</p>
+      </div>
+    </div>
+
+    <!-- Center-aligned Highlight Box -->
+    <div class="max-w-7xl mx-auto mt-10">
+      <div class="bg-white rounded shadow p-6 text-xl italic text-center leading-relaxed font-serif">
+        <span class="text-green-600 font-bold">Our portable in-situ dynamic balancer</span> can help you correct imbalance issues <span class="text-green-600 font-bold">at your location.</span>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <!-- Video Section: Single Centered Video -->
+    <div class="max-w-3xl mx-auto mt-12 px-4">
+      <video controls class="rounded shadow w-full h-auto" poster="assets/images/video-poster-onsite.jpg">
+        <source src="https://res.cloudinary.com/dbuimoqgm/video/upload/v1750006117/uhcgbpkyqu4aegucort7.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="mt-2 text-sm italic text-center">On-site Dynamic Balancing & Vibration Testing of ID Fan.</p>
+    </div>
+  </section>
+
+
+
+  <!-- On-Site Services Section -->
+  <section class="py-16 bg-green-600">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-4">
+
+      <!-- Left Column: What We Offer -->
+      <div class="bg-white p-8 rounded shadow text-left">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-900">What We Offer</h2>
+        <ul class="space-y-4 text-gray-800 text-base leading-relaxed">
+          <li>
+            <span class="text-green-700 font-semibold">On-Site Dynamic Balancing</span> – Reduce vibration and extend equipment life with precision balancing done directly at your facility.
+          </li>
+          <li>
+            <span class="text-green-700 font-semibold">Vibration Testing & Diagnosis</span> – Identify root causes of vibration using high-accuracy analyzers.
+          </li>
+          <li>
+            <span class="text-green-700 font-semibold">Alignment Checking</span> – Ensure shaft and component alignment for optimal rotational stability.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Image, Heading, Subtext, Button -->
+      <div class="text-center">
+        <img src="assets/images/portable balancer.png" alt="Balancing Equipment" class="rounded shadow mx-auto mb-6 w-full max-w-md">
+        <h3 class="text-white text-lg font-semibold leading-snug">On-Site Dynamic Balancing<br>and Vibration Testing</h3>
+        <p class="text-white mt-4 text-sm font-medium max-w-md mx-auto">
+          Suitable for Dynamic Balancing & Vibration Testing at your location without disassembling your fan.
+        </p>
+        <a href="contact.html" class="mt-6 inline-block bg-white text-green-600 text-sm px-6 py-2 rounded-full shadow font-medium">
+          Book now for site visit
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-green-500 py-10 text-sm">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4 items-start">
+      
+      <!-- Left Column -->
+      <div class="space-y-6">
+        <!-- Logo + Name -->
+        <div class="flex flex-col items-start">
+          <img src="assets/images/logo cropped.png" alt="Logo" class="h-10 mb-2">
+          <span class="text-lg font-bold">AGRO AIRTECH</span>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-bold mb-2">Contact</h4>
+          <p class="text-white">Email: sohom@agroairtech.com</p>
+          <p class="text-white">Mobile/WhatsApp: 9038170448, 9088017725</p>
+        </div>
+        
+        <!-- Address -->
+        <div>
+          <h4 class="font-bold mb-2">Location</h4>
+          <p class="text-white">Jote Shibrampur, Maheshtala,<br>Near Greenfield City, Biren Roy Road (West),<br>Kolkata -- 700141, West Bengal</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Map -->
+      <div>
+        <iframe 
+          class="w-full h-full min-h-[300px] rounded shadow border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.4208191556822!2d88.27293337599731!3d22.488389136050166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027bc15c80ff69%3A0x8debe64ec36b4de!2sagro%20airtech!5e0!3m2!1sen!2sin!4v1749968935897!5m2!1sen!2sin" 
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-8 text-center">
+      <p class="text-green-400">Made by MI</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
