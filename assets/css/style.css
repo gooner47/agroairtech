@@ -1,0 +1,8 @@
+
+/* Custom styles using Tailwind utilities */
+h1, h2, h3 {
+  @apply font-serif font-bold;
+}
+p {
+  @apply text-gray-800;
+}

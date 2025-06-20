@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agro AirTech | Dynamic Balancing Experts</title>
+  <!-- ✅ Custom Tailwind config: Add this BEFORE the Tailwind script -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            agrogreen: '#22a556',
+            navbarbg: '#e4e2db',   // new color for navbar
+          }
+        }
+      }
+    }
+  </script>
+  <!-- ✅ Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Your custom font setup -->
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Libre Baskerville', serif; }
+  </style>
+</head>
+
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-indigo-950 backdrop-blur-lg p-4 text-green-400 transition-all duration-300 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo cropped.png" alt="Logo" class="h-10 w-auto">
+        <span class="text-xl font-bold">AGRO AIRTECH</span>
+      </div>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:underline font-bold">Home</a>
+        <a href="products.html" class="hover:underline font-bold">Products</a>
+        <a href="services.html" class="hover:underline font-bold">Services</a>
+        <a href="about.html" class="hover:underline font-bold">About</a>
+        <a href="contact.html" class="hover:underline font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Carousel -->
+  <section x-data="{ activeSlide: 0, slides: 3 }" x-init="setInterval(() => activeSlide = (activeSlide + 1) % slides, 4000)" class="relative w-full h-[500px] overflow-hidden">
+
+    <!-- Slides -->
+    <div class="absolute inset-0 transition-all duration-300 flex" :style="'transform: translateX(-' + (activeSlide * 100) + '%)'">
+      
+      <!-- Slide 1: Centrifugal Fans -->
+      <div class="w-full flex-shrink-0 h-[500px] relative">
+        <img src="assets/images/slide front page fan 1.jpg" alt="Centrifugal Fans" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+          <div class="text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Industrial Centrifugal Fans</h1>
+            <h2 class="text-2xl md:text-3xl">Custom-built for High Efficiency</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Dynamic Balancing -->
+      <div class="w-full flex-shrink-0 h-[500px] relative">
+        <img src="assets/images/7 ton machine c.png" alt="Dynamic Balancing" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+          <div class="text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Dynamic Balancing Services</h1>
+            <h2 class="text-2xl md:text-3xl">Reduce Vibration. Extend Equipment Life.</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Air Pollution Control -->
+      <div class="w-full flex-shrink-0 h-[500px] relative">
+        <img src="assets/images/bag filter unit.jpg" alt="Air Pollution Control" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+          <div class="text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Air Pollution Control Equipment</h1>
+            <h2 class="text-2xl md:text-3xl">Clean Air. Compliant Operations</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Alpine.js (needed for the auto-rotation logic) -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+  <!-- Hero Section -->
+  <!-- <section class="relative w-full h-[500px]"> -->
+      <!-- Cropped Image Container -->
+      <!-- <div class="w-full h-full overflow-hidden"> -->
+        <!-- <img src="assets/images/7 ton machine c.png" alt="Hero Image" class="w-full h-full object-cover object-center" /> -->
+      <!-- </div> -->
+
+      <!-- Overlay -->
+        <!-- <div class="absolute inset-0 bg-black bg-opacity-40"></div> -->
+
+      <!-- Text Overlay -->
+        <!-- <div class="absolute inset-0 flex items-center justify-center text-center"> -->
+          <!-- <div class="text-white"> -->
+            <!-- <h1 class="text-6xl md:text-6xl font-bold mb-4">Dynamic Balancing for Critical Machinery</h1> -->
+            <!-- <h2 class="text-4xl md:text-4xl">Minimum Vibration. Maximum Life.</h2> -->
+          <!-- </div> -->
+        <!-- </div> -->
+  <!-- </section> -->
+
+
+<!-- About Section -->
+<section class="bg-green-600 text-white py-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4 items-start">
+    
+    <!-- Left Column: Image -->
+    <div>
+      <img src="assets/images/about section pic.jpg" alt="Workshop" class="rounded shadow mb-4">
+      <p class="text-lg italic text-center mt-4">ID Fan manufactured and assembled in our workshop</p>
+    </div>
+
+    <!-- Right Column: About + Video -->
+    <div>
+      <h2 class="text-5xl font-bold mb-3 leading-tight">About<br>our company</h2>
+      <p class="mb-4 text-sm">
+        Agro AirTech manufactures industrial centrifugal fans and air pollution control equipment like ID fans, axial flow fans, and blowers for ESPs and bag filters. We serve industries such as cement, steel, ferro alloys, and rice mills, delivering reliable airflow and dust control solutions.
+        <br><br>
+        We also provide ISO-compliant dynamic balancing services for rotating equipment. Our advanced machines and experienced technicians help reduce vibration, minimize downtime, and extend equipment life.
+      </p>
+      <a href="about.html" class="bg-white text-green-600 px-4 py-2 rounded shadow hover:bg-gray-100 text-sm inline-block mb-12 rounded-full mt-3">Learn more</a>
+    
+      <!-- Video Embed -->
+      <!-- <video controls class="rounded shadow w-full h-auto" poster="assets/images/video-poster.jpg"> -->
+        <!-- <source src="https://res.cloudinary.com/dbuimoqgm/video/upload/v1750006117/akbefgjnvghw4wmlcyoj.mp4" type="video/mp4"> -->
+        <!-- Your browser does not support the video tag. -->
+      <!-- </video> -->
+      <!-- <br> -->
+      <!-- <p class="text-lg italic text-center">Dynamic balancing of fan impeller at 2900 RPM</p> -->
+
+      <!-- Replace Video with Image -->
+        <img src="assets/images/balancing of impeller.jpg" alt="Dynamic balancing example" class="rounded shadow w-full h-auto mt-11">
+        <p class="text-lg italic text-center mt-4">Dynamic balancing at our in-house facility</p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Products Section -->
+  <section class="py-16 bg-[#e2e0d9] text-center">
+    <h2 class="text-5xl font-bold text-green-600 mb-10">Our products</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-4">
+      
+      <!-- Product 1 -->
+      <div>
+        <img src="assets/images/centrifugal fans 3.jpg" alt="Centrifugal Fans" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">Centrifugal Fans</h3>
+        <p class="text-sm mt-1 mb-9">ID Fan, FD Fans, Tube Axial Fans, Air Slide Blowers, and Ventilation Fans as per your specifications.</p>
+        <a href="centrifugal fans.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div>
+        <img src="assets/images/air pollution control equipment1.jpg" alt="Air Pollution Control Equipment" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">Air Pollution Control Equipment</h3>
+        <p class="text-sm mt-1 mb-9">Bag Filters, Cyclones, and Dust extraction units as per your requirement.</p>
+        <a href="air pollution control equipment.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div>
+        <img src="assets/images/Damper 2.jpg" alt="Spares and Accessories" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">Spares and Accessories</h3>
+        <p class="text-sm mt-1 mb-9">Spare Impellers, Shafts, Dampers, etc. manufactured to fit existing Fan.</p>
+        <a href="spares and accessories.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section class="py-16 bg-white text-center">
+    <h2 class="text-5xl font-bold text-green-600 mb-10">Our services</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-4">
+      
+      <!-- Service 1 -->
+      <div>
+        <img src="assets/images/service 1.jpg" alt="Off-Site Balancing" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">Off-Site Dynamic Balancing of Impellers & Rotors</h3>
+        <p class="text-sm mt-1 mb-9">Provision for up to 7 ton job weight and 3350 mm Dia. Precision Balancing as per ISO standards.</p>
+        <a href="dynamic-balancing.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div>
+        <img src="assets/images/service 2.jpg" alt="On-Site Balancing" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">On-Site Dynamic Balancing & Vibration Testing</h3>
+        <p class="text-sm mt-1 mb-9">On-site balancing, vibration analysis (spectrum), and alignment checking.</p>
+        <a href="onsite-balancing.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div>
+        <img src="assets/images/service 3.jpg" alt="Repairing & Replacement" 
+            class="rounded shadow mb-4 object-cover w-full h-60">
+        <h3 class="font-bold text-green-600 text-lg">Rectification & Replacement of Fan & Impeller</h3>
+        <p class="text-sm mt-1 mb-9">Damaged impeller repairing, blade lining, hard facing, and 1:1 impeller/fan replacement.</p>
+        <a href="repairing-replacement.html" class="bg-green-600 text-white text-sm px-4 py-3 rounded-full mt-9">Enquire</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Our Clients Section -->
+  <section class="bg-[#e2e0d9] py-16 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- Left Column: Text Content -->
+      <div>
+        <h2 class="text-5xl font-bold text-green-600 mb-10">Industries we serve</h2>
+        <p class="text-lg font-medium mb-4">Our clientele includes:</p>
+        <ul class="list-disc list-inside text-gray-800 space-y-2 text-base">
+          <li>Cement & Steel Plants</li>
+          <li>Thermal & Biomass Power Units</li>
+          <li>Food Processing Units</li>
+          <li>Rice Mills</li>
+          <li>Machinery Fabricators</li>
+          <li>Fan & Blower OEMs</li>
+          <li>Small Engineering Workshops</li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div>
+        <img src="assets/images/collection of fans.jpg" alt="Client machinery image" class="rounded-lg shadow-lg w-full h-auto object-cover">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Why Choose Us -->
+  <section class="bg-green-600 text-white py-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 px-4 items-start">
+      <div>
+        <h2 class="text-5xl font-bold mb-4">Why choose us?</h2>
+        <ul class="list-disc list-inside text-white space-y-2 text-base">
+          <li>100% in-house manufacturing facilities</li>
+          <li>Precision-driven, ISO-compliant dynamic balancing and run testing</li>
+          <li>Quick turnaround</li>
+          <li>Affordable, reliable service</li>
+          <li>On-site balancing & vibration analysis (spectrum)</li>
+          <li>On-site alignment checking</li>
+          <li>On-site airflow measurement of fans and blowers</li>
+        </ul>
+      </div>
+      <div>
+         <!-- Video Embed -->
+        <!-- Right Column: Image -->
+        <div>
+          <img src="assets/images/fan manufacturers.jpg" alt="Client machinery image" class="rounded-lg shadow-lg w-full h-auto object-cover">
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-950 text-green-500 py-10 text-sm">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4 items-start">
+      
+      <!-- Left Column -->
+      <div class="space-y-6">
+        <!-- Logo + Name -->
+        <div class="flex flex-col items-start">
+          <img src="assets/images/logo cropped.png" alt="Logo" class="h-10 mb-2">
+          <span class="text-lg font-bold">AGRO AIRTECH</span>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-bold mb-2">Contact</h4>
+          <p class="text-white">Email: sohom@agroairtech.com</p>
+          <p class="text-white">Mobile/WhatsApp: 9038170448, 9088017725</p>
+        </div>
+        
+        <!-- Address -->
+        <div>
+          <h4 class="font-bold mb-2">Location</h4>
+          <p class="text-white">Jote Shibrampur, Maheshtala,<br>Near Greenfield City, Biren Roy Road (West),<br>Kolkata -- 700141, West Bengal</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Map -->
+      <div>
+        <iframe 
+          class="w-full h-full min-h-[300px] rounded shadow border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.4208191556822!2d88.27293337599731!3d22.488389136050166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027bc15c80ff69%3A0x8debe64ec36b4de!2sagro%20airtech!5e0!3m2!1sen!2sin!4v1749968935897!5m2!1sen!2sin" 
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-8 text-center">
+      <p class="text-green-400">Made by MI</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
