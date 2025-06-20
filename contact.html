@@ -286,13 +286,31 @@
         const popup = document.createElement('div');
         popup.textContent = "Thanks! Your message has been received.";
         popup.className = "fixed top-5 right-5 bg-green-600 text-white py-2 px-4 rounded shadow-lg z-50 hidden";
-
         document.body.appendChild(popup);
-
+      
+        function copyInputValue(fromName) {
+          const source = form.querySelector(`[name="${fromName}"]:not([type="hidden"])`);
+          const target = form.querySelector(`input[type="hidden"][name="${fromName}"]`);
+          if (source && target) target.value = source.value || '';
+        }
+      
+        function syncFields() {
+          [
+            "airflow", "pressure", "temperature", "application",
+            "bf_airflow", "bf_temp", "bf_dust", "bf_dustload", "bf_application",
+            "cy_airflow", "cy_dustload", "cy_dust", "cy_use",
+            "rav_size", "spare_type", "spare_details"
+          ].forEach(copyInputValue);
+        }
+      
         form.addEventListener('submit', function (e) {
-          e.preventDefault(); // stop default behavior
+          e.preventDefault();
+      
+          // Sync values
+          syncFields();
+      
           const formData = new FormData(form);
-
+      
           fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -303,13 +321,12 @@
             setTimeout(() => popup.classList.add('hidden'), 5000);
             form.reset();
           })
-          .catch(error => alert('Error! Please try again.'));
+          .catch(error => {
+            alert('Error! Please try again.');
+            console.error(error);
+          });
         });
       </script>
-
-
-
-
 
   </section>
 
